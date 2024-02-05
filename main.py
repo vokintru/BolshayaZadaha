@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('file.ui', self)  # Загружаем дизайн
+        uic.loadUi('design_for_map.ui', self)  # Загружаем дизайн
 
     def run(self):
         self.label.setText("OK")
