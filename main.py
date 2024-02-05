@@ -33,15 +33,19 @@ class App(QMainWindow):
             print("Ошибка выполнения запроса:")
             print(map_api_server)
             print("Http статус:", response.status_code, "(", response.reason, ")")
+            self.statusBar().showMessage(f'Ошибка выполнения запроса! Http статус: '
+                                         f'{response.status_code} ({response.reason})')
         else:
             # Запишем полученное изображение в файл.
+            self.statusBar().showMessage("")
             self.map_file = "map.png"
             with open(self.map_file, "wb") as file:
                 file.write(response.content)
 
 
+
     def req(self):
-        self.address_ll = self.search_line.text()
+        self.address_ll = get_ll_span(self.search_line.text())[0]
         self.initUI(self.address_ll)
 
     def initUI(self, address_ll):
