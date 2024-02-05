@@ -10,14 +10,12 @@ from PyQt5 import uic
 SCREEN_SIZE = [600, 450]
 
 
-class Example(QMainWindow):
-    def __init__(self, address_ll, z):
+class App(QMainWindow):
+    def __init__(self, z):
         super().__init__()
         uic.loadUi('design_for_map.ui', self)  # Загружаем дизайн
-        self.address_ll = address_ll
         self.z = z
-        self.getImage()
-        self.initUI()
+        self.search_btn.clicked.connect(self.req)
 
     def getImage(self):
         print('xa', self.address_ll)
@@ -35,14 +33,19 @@ class Example(QMainWindow):
             print("Ошибка выполнения запроса:")
             print(map_api_server)
             print("Http статус:", response.status_code, "(", response.reason, ")")
-            sys.exit(1)
+        else:
+            # Запишем полученное изображение в файл.
+            self.map_file = "map.png"
+            with open(self.map_file, "wb") as file:
+                file.write(response.content)
 
-        # Запишем полученное изображение в файл.
-        self.map_file = "map.png"
-        with open(self.map_file, "wb") as file:
-            file.write(response.content)
 
-    def initUI(self):
+    def req(self):
+        self.address_ll = self.search_line.text()
+        self.initUI(self.address_ll)
+
+    def initUI(self, address_ll):
+        self.getImage()
         self.setWindowTitle('Отображение карты')
         self.pixmap = QPixmap(self.map_file)
         self.image = self.map_label
@@ -52,11 +55,8 @@ class Example(QMainWindow):
 
 
 if __name__ == '__main__':
-    s = input('Напиши адрес: ')
-    print(get_ll_span(s))
-    adress = get_ll_span(s)[0]
     z = 6
     app = QApplication(sys.argv)
-    ex = Example(adress, z)
+    ex = App(z)
     ex.show()
     sys.exit(app.exec())
