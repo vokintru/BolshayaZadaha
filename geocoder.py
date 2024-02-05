@@ -50,7 +50,7 @@ def get_ll_span(address):
 
     # Координаты центра топонима:
     toponym_coodrinates = toponym["Point"]["pos"]
-    # Долгота и Широта :
+    # Долгота и Широта:
     toponym_longitude, toponym_lattitude = toponym_coodrinates.split(" ")
 
     # Собираем координаты в параметр ll
