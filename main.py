@@ -63,7 +63,7 @@ class Example(QWidget):
 
 
 if __name__ == '__main__':
-    s = input('Напиши адрес')
+    s = input('Напиши адрес: ')
     print(get_ll_span(s))
     adress = get_ll_span(s)[0]
     z = 6
