@@ -14,89 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="PgUp_button">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>790</y>
-      <width>231</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PgUp</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="PgDown_button">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>790</y>
-      <width>231</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PgDown</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_left">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>780</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>влево</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_right">
-    <property name="geometry">
-     <rect>
-      <x>810</x>
-      <y>780</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>вправо</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_down">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>780</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>вниз</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_up">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>690</y>
-      <width>75</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>вверх</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="search_line">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>640</y>
+      <y>820</y>
       <width>1071</width>
       <height>31</height>
      </rect>
@@ -108,7 +30,7 @@
       <x>20</x>
       <y>10</y>
       <width>1051</width>
-      <height>611</height>
+      <height>781</height>
      </rect>
     </property>
     <property name="text">
