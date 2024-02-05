@@ -6,20 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1111</width>
-    <height>905</height>
+    <width>627</width>
+    <height>565</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QLineEdit" name="search_line">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>820</y>
-      <width>1071</width>
+      <y>480</y>
+      <width>601</width>
       <height>31</height>
      </rect>
     </property>
@@ -29,8 +41,8 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>1051</width>
-      <height>781</height>
+      <width>591</width>
+      <height>450</height>
      </rect>
     </property>
     <property name="text">
@@ -43,7 +55,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1111</width>
+     <width>627</width>
      <height>21</height>
     </rect>
    </property>
